@@ -11,7 +11,7 @@ try:
         "data":data
     }
     database = urllib.parse.urlencode(database)
-    api_url = "https://api.qrserver.com/v1/create-qr-code/?"+database
+    api_url = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example"+database
     document_name = ".\\QR_"+ data +".png"
     urllib.request.urlretrieve(api_url,document_name)
     print("Download is successful :)")
